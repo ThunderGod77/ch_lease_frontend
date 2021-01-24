@@ -21,33 +21,22 @@ const BDTable = ({ data, totalCost }) => {
             })}
           </tr>
           <tr>
-            <th scope="row">Total PreTax Flow</th>
+            <th scope="row">Total Cash Flow</th>
             {data.map((val, i) => {
               return <td>{val[2]}</td>;
             })}
           </tr>
+
           <tr>
-            <th scope="row">Tax Benefit on Depriciation</th>
+            <th scope="row">Discounting Rate</th>
             {data.map((val, i) => {
               return <td>{val[3]}</td>;
             })}
           </tr>
           <tr>
-            <th scope="row">Post Tax Cash Flow</th>
-            {data.map((val, i) => {
-              return <td>{val[4]}</td>;
-            })}
-          </tr>
-          <tr>
-            <th scope="row">Discounting Rate</th>
-            {data.map((val, i) => {
-              return <td>{val[5]}</td>;
-            })}
-          </tr>
-          <tr>
             <th scope="row">PV after discount factor</th>
             {data.map((val, i) => {
-              return <td>{val[6]}</td>;
+              return <td>{val[4]}</td>;
             })}
           </tr>
         </tbody>

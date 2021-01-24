@@ -16,7 +16,7 @@ import {
 } from "reactstrap";
 import classnames from "classnames";
 
-import Pd from "./PersonalData";
+import Pd from "./Pd";
 import Bd from "./BusinessData";
 
 const Example = (props) => {

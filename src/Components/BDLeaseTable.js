@@ -7,7 +7,7 @@ const BDTable = ({ data, totalCost }) => {
       <Table size="lg">
         <thead>
           <tr>
-            <th>Buy Assumptions</th>
+            <th>Lease Assumptions</th>
             {data.map((val, i) => {
               return <td>{"Year " + val[0]}</td>;
             })}

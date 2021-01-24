@@ -1,7 +1,7 @@
 import React from "react";
 import { Table, Toast, ToastBody, ToastHeader } from "reactstrap";
 
-const BDTable = ({ data, totalCost }) => {
+const PDTable = ({ data, totalCost }) => {
   return (
     <>
       <Table size="lg">
@@ -15,39 +15,33 @@ const BDTable = ({ data, totalCost }) => {
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Oppotunity Cost(interest)</th>
+            <th scope="row">Cash Flow(Lease)</th>
             {data.map((val, i) => {
               return <td>{val[1]}</td>;
             })}
           </tr>
           <tr>
-            <th scope="row">Total PreTax Flow</th>
+            <th scope="row">Interest on Deposit</th>
             {data.map((val, i) => {
               return <td>{val[2]}</td>;
             })}
           </tr>
           <tr>
-            <th scope="row">Tax Benefit on Depriciation</th>
+            <th scope="row">Total Cash Flow</th>
             {data.map((val, i) => {
               return <td>{val[3]}</td>;
             })}
           </tr>
           <tr>
-            <th scope="row">Post Tax Cash Flow</th>
+            <th scope="row">Discounting Rate</th>
             {data.map((val, i) => {
               return <td>{val[4]}</td>;
             })}
           </tr>
           <tr>
-            <th scope="row">Discounting Rate</th>
-            {data.map((val, i) => {
-              return <td>{val[5]}</td>;
-            })}
-          </tr>
-          <tr>
             <th scope="row">PV after discount factor</th>
             {data.map((val, i) => {
-              return <td>{val[6]}</td>;
+              return <td>{val[5]}</td>;
             })}
           </tr>
         </tbody>
@@ -59,11 +53,11 @@ const BDTable = ({ data, totalCost }) => {
           color: "white",
         }}
       >
-        <ToastHeader>Total cost on Leasing Equipment</ToastHeader>
+        <ToastHeader>Total cost on Leasing Product</ToastHeader>
         <ToastBody>{totalCost + " Rupees"}</ToastBody>
       </Toast>
     </>
   );
 };
 
-export default BDTable;
+export default PDTable;
