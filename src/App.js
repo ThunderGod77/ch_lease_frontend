@@ -1,7 +1,8 @@
 import NavBar from "./Components/NavBar";
 import AddData from "./Components/AddData";
 import Home from "./Components/Home";
-import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
+import Footer from "./Components/Footer";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <AddData />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }

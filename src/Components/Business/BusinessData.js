@@ -1,9 +1,9 @@
 import { Button } from "reactstrap";
 import React, { useState } from "react";
-import InputAndTooltip from "./InputAndTooltip";
+import InputAndTooltip from "../InputAndTooltip";
 import BDTable from "./BDTable";
 import BDLeaseTable from "./BDLeaseTable";
-import Result from "./Result";
+import Result from "../Result";
 
 const Bd = function (props) {
   const [productName, setProductName] = useState("");
@@ -21,6 +21,18 @@ const Bd = function (props) {
   const [leaseData, setLeaseData] = useState([]);
   const [leaseTotalCost, setLeaseTotalCost] = useState(0);
   const showTable = () => {
+    if (
+      lease === "0" ||
+      equipmentCost === "0" ||
+      residualValue === "0" ||
+      taxRate === "0" ||
+      life === "0" ||
+      interest === "0" ||
+      depreciationRate === "0"
+    ) {
+      alert("Please fill all the fields");
+      return;
+    }
     calculate();
     calculateLease();
     setTable(true);

@@ -16,8 +16,9 @@ import {
 } from "reactstrap";
 import classnames from "classnames";
 
-import Pd from "./Pd";
-import Bd from "./BusinessData";
+import Pd from "./Personal/Pd";
+import Bd from "./Business/BusinessData";
+import Hd from "./HomeLoan/HomeData";
 
 const Example = (props) => {
   const [activeTab, setActiveTab] = useState("1");
@@ -51,6 +52,16 @@ const Example = (props) => {
                 Business
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === "3" })}
+                onClick={() => {
+                  toggle("3");
+                }}
+              >
+                Home Loan
+              </NavLink>
+            </NavItem>
           </Nav>
           <TabContent activeTab={activeTab}>
             <TabPane tabId="1">
@@ -58,6 +69,9 @@ const Example = (props) => {
             </TabPane>
             <TabPane tabId="2">
               <Bd />
+            </TabPane>
+            <TabPane tabId="3">
+              <Hd />
             </TabPane>
           </TabContent>
         </Jumbotron>

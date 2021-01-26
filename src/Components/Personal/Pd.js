@@ -1,8 +1,8 @@
 import { Button } from "reactstrap";
 import React, { useState } from "react";
-import InputAndTooltip from "./InputAndTooltip";
+import InputAndTooltip from "../InputAndTooltip";
 
-import Result from "./Result";
+import Result from "../Result";
 import PDTable from "./PDTable";
 import PDTableLease from "./PDTableLease";
 
